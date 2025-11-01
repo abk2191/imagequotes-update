@@ -48,7 +48,7 @@ body {
 .new-quote-button {
   --😀: #644dff;
   --😀😀: #4836bb;
-  --😀😀😀: #654dff63;
+  --😀😀😀: #644dff;
   cursor: pointer;
   width: 184px;
   height: 48px;
@@ -79,7 +79,7 @@ body {
 .download-button {
   --😀: #1e77f3;
   --😀😀: #96b2fb;
-  --😀😀😀: #654dff63;
+  --😀😀😀: #1e77f3;
   cursor: pointer;
   width: 184px;
   height: 48px;
@@ -110,7 +110,7 @@ body {
 .share-on-whatsapp-button {
   --😀: #00fc54;
   --😀😀: #0e891c;
-  --😀😀😀: #654dff63;
+  --😀😀😀: #00fc54;
   cursor: pointer;
   width: 184px;
   height: 48px;

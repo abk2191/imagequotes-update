@@ -241,13 +241,22 @@ function App() {
               marginTop: "20px",
             }}
           >
-            <button onClick={fetchImage} className="new-quote-button">
-              New Quote
-            </button>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "10px",
+              }}
+            >
+              <button onClick={fetchImage} className="new-quote-button">
+                New Quote
+              </button>
 
-            <button onClick={downloadImage} className="download-button">
-              Download
-            </button>
+              <button onClick={downloadImage} className="download-button">
+                Download
+              </button>
+            </div>
 
             <button
               onClick={shareToWhatsApp}
