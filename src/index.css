@@ -22,8 +22,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
-  animation: white-pulse-subtle 3s ease-in-out infinite;
+
   border-radius: 15px;
 }
 
