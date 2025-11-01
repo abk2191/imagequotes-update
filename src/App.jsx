@@ -186,7 +186,7 @@ function App() {
           className="qimage-div"
           style={{
             margin: "20px 0",
-            height: "400px",
+            maxHeight: "450px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -224,7 +224,7 @@ function App() {
             justifyContent: "center",
             gap: "15px",
             flexWrap: "wrap",
-            marginTop: "60px",
+            marginTop: "20px",
           }}
         >
           <div
