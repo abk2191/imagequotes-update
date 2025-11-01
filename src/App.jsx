@@ -241,10 +241,8 @@ function App() {
               marginTop: "20px",
             }}
           >
-            <button onClick={fetchImage} className="button">
-              <div class="button-top">New Quote</div>
-              <div class="button-bottom"></div>
-              <div class="button-base"></div>
+            <button onClick={fetchImage} className="download-button">
+              New Quote
             </button>
 
             <button onClick={downloadImage} className="download-button">
