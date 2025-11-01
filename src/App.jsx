@@ -241,7 +241,7 @@ function App() {
               marginTop: "20px",
             }}
           >
-            <button onClick={fetchImage} className="download-button">
+            <button onClick={fetchImage} className="new-quote-button">
               New Quote
             </button>
 
@@ -249,8 +249,11 @@ function App() {
               Download
             </button>
 
-            <button onClick={shareToWhatsApp} className="sharebutton">
-              Share on WhatsApp
+            <button
+              onClick={shareToWhatsApp}
+              className="share-on-whatsapp-button"
+            >
+              WhatsApp
             </button>
           </div>
         </div>
