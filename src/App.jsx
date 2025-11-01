@@ -265,14 +265,7 @@ function App() {
             100% { transform: rotate(360deg); }
           }
           
-          body {
-      margin: 0;
-      overflow: hidden; /* Prevent scrolling */
-    }
     
-    html, body, #root {
-      height: 100%;
-    }
         `}
       </style>
     </div>
