@@ -162,7 +162,7 @@ function App() {
               }}
             ></div>
             <p style={{ fontSize: "1.2rem", margin: 0 }}>
-              Loading your inspiration...
+              Fetching new quote...
             </p>
           </div>
         )}
@@ -201,8 +201,6 @@ function App() {
                 maxWidth: "100%",
                 maxHeight: "400px",
                 borderRadius: "8px",
-                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
-                border: "none",
               }}
               onError={() => setError("Image failed to load")}
             />

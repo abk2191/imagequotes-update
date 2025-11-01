@@ -16,6 +16,7 @@ body {
 
 .qimage {
   width: 95%;
+  border: 2px solid white;
 }
 
 .qimage-div {
