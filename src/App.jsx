@@ -136,135 +136,120 @@ function App() {
         color: "#333",
       }}
     >
-      <div
-        className="wrapper"
-        style={{
-          backgroundColor: " #1a1a1a",
-          height: "700px",
-          boxShadow: "0 0 15px rgba(255, 255, 255, 0.9)",
-          padding: "15px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          borderRadius: "20px",
-        }}
-      >
-        {/* Show loading or error messages inside the container, not instead of it */}
-        <div style={{ height: "400px" }}>
-          {loading && (
-            <div
-              style={{
-                padding: "40px",
-                textAlign: "center",
-                color: "#667eea",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <div
-                style={{
-                  width: "50px",
-                  height: "50px",
-                  border: "3px solid rgba(102, 126, 234, 0.3)",
-                  borderTop: "3px solid #667eea",
-                  borderRadius: "50%",
-                  animation: "spin 1s linear infinite",
-                  marginBottom: "20px",
-                }}
-              ></div>
-              <p style={{ fontSize: "1.2rem", margin: 0 }}>
-                Loading your inspiration...
-              </p>
-            </div>
-          )}
-
-          {error && (
-            <div
-              style={{
-                padding: "20px",
-                color: "#e74c3c",
-                backgroundColor: "#ffeded",
-                borderRadius: "10px",
-                margin: "20px 0",
-                border: "1px solid #ffcccb",
-              }}
-            >
-              Error: {error}
-            </div>
-          )}
-
+      {/* Show loading or error messages inside the container, not instead of it */}
+      <div style={{ height: "400px" }}>
+        {loading && (
           <div
-            className="qimage-div"
             style={{
-              margin: "20px 0",
-              maxHeight: "400px",
+              padding: "40px",
+              textAlign: "center",
+              color: "#667eea",
               display: "flex",
+              flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
             }}
           >
-            {!loading && !error && imageUrl && (
-              <img
-                className="qimage"
-                src={imageUrl}
-                alt="Inspirational quote"
-                style={{
-                  maxWidth: "100%",
-                  maxHeight: "400px",
-                  borderRadius: "8px",
-                  boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
-                  border: "none",
-                }}
-                onError={() => setError("Image failed to load")}
-              />
-            )}
+            <div
+              style={{
+                width: "50px",
+                height: "50px",
+                border: "3px solid rgba(102, 126, 234, 0.3)",
+                borderTop: "3px solid #667eea",
+                borderRadius: "50%",
+                animation: "spin 1s linear infinite",
+                marginBottom: "20px",
+              }}
+            ></div>
+            <p style={{ fontSize: "1.2rem", margin: 0 }}>
+              Loading your inspiration...
+            </p>
           </div>
-        </div>
+        )}
 
+        {error && (
+          <div
+            style={{
+              padding: "20px",
+              color: "#e74c3c",
+              backgroundColor: "#ffeded",
+              borderRadius: "10px",
+              margin: "20px 0",
+              border: "1px solid #ffcccb",
+            }}
+          >
+            Error: {error}
+          </div>
+        )}
+
+        <div
+          className="qimage-div"
+          style={{
+            margin: "20px 0",
+            maxHeight: "400px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {!loading && !error && imageUrl && (
+            <img
+              className="qimage"
+              src={imageUrl}
+              alt="Inspirational quote"
+              style={{
+                maxWidth: "100%",
+                maxHeight: "400px",
+                borderRadius: "8px",
+                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
+                border: "none",
+              }}
+              onError={() => setError("Image failed to load")}
+            />
+          )}
+        </div>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          border: "1px solid transparent",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <div
           style={{
             display: "flex",
-            border: "1px solid transparent",
-            alignItems: "center",
             justifyContent: "center",
+            gap: "15px",
+            flexWrap: "wrap",
+            marginTop: "20px",
           }}
         >
           <div
             style={{
               display: "flex",
+              alignItems: "center",
               justifyContent: "center",
-              gap: "15px",
-              flexWrap: "wrap",
-              marginTop: "20px",
+              gap: "10px",
             }}
           >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "10px",
-              }}
-            >
-              <button onClick={fetchImage} className="new-quote-button">
-                New Quote
-              </button>
+            <button onClick={fetchImage} className="new-quote-button">
+              New Quote
+            </button>
 
-              <button onClick={downloadImage} className="download-button">
-                Download
-              </button>
-            </div>
-
-            <button
-              onClick={shareToWhatsApp}
-              className="share-on-whatsapp-button"
-            >
-              WhatsApp
+            <button onClick={downloadImage} className="download-button">
+              Download
             </button>
           </div>
+
+          <button
+            onClick={shareToWhatsApp}
+            className="share-on-whatsapp-button"
+          >
+            WhatsApp
+          </button>
         </div>
       </div>
 
