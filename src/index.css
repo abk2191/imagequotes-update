@@ -204,7 +204,7 @@ body {
   box-shadow: 0 0 20px rgba(0, 247, 255, 0.4), 0 0 40px rgba(0, 195, 255, 0.3),
     0 0 60px rgba(0, 119, 255, 0.2);
   animation: electric-pulse 3s ease-in-out infinite;
-  margin-top: 55px;
+  margin-top: 10px;
 }
 
 @keyframes electric-pulse {
